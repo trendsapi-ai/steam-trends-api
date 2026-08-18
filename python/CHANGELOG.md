@@ -2,4 +2,4 @@
 
 ## 1.0.0
 
-- Initial public release.
+- Initial public release with the HTTP contract README.
