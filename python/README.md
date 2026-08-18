@@ -2,13 +2,12 @@
 
 Steam player-interest trends via the Trends API. Monthly CCU history, growth, and live most-played. No Steam Web API key.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![PyPI](https://img.shields.io/pypi/v/trendsapi-steam.svg)](https://pypi.org/project/trendsapi-steam/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/trendsapi-steam.svg)](https://pypi.org/project/trendsapi-steam/)
 
 Key: [trendsapi.ai/#get-key](https://trendsapi.ai/#get-key). Full contract: [trendsapi-ai/trendsapi](https://github.com/trendsapi-ai/trendsapi).
 
 ## Install
-
-### Python
 
 ```bash
 pip install trendsapi-steam
@@ -22,6 +21,8 @@ series = client.get_time_series("counter-strike 2")
 growth = client.get_growth("counter-strike 2", percent_growth=["12M"])
 hot = client.get_live(limit=10)
 ```
+
+Keyword helpers default to `source: "steam"`. Override `source=` for any other platform. Official full client: [`trendsapi`](https://pypi.org/project/trendsapi/).
 
 ## Call
 
@@ -46,7 +47,7 @@ Series is monthly. `value` is 0-100 vs that title, not raw CCU.
 
 `type: steam` is 400.
 
-Site: [https://trendsapi.ai/trends/steam-trends](https://trendsapi.ai/trends/steam-trends).
+Site: [https://trendsapi.ai/trends/steam-trends](https://trendsapi.ai/trends/steam-trends). GitHub: [trendsapi-ai/steam-trends-api](https://github.com/trendsapi-ai/steam-trends-api).
 
 ## License
 

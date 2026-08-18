@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "trendsapi-steam"
+version = "1.0.0"
+description = "Steam player-interest trends via the Trends API. Monthly CCU history, growth, and live most-played. No Steam Web API key."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Trends API", email = "hello@trendsapi.ai" }]
+keywords = [
+  "steam",
+  "steam-api",
+  "game-trends",
+  "ccu",
+  "trendsapi",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = ["trendsapi>=1.0.0"]
+
+[project.urls]
+Homepage = "https://trendsapi.ai"
+Documentation = "https://trendsapi.ai/#quickstart"
+Repository = "https://github.com/trendsapi-ai/steam-trends-api"
+"Bug Tracker" = "https://github.com/trendsapi-ai/steam-trends-api/issues"
+"Get API key" = "https://trendsapi.ai/#get-key"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/trendsapi_steam"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/trendsapi_steam", "README.md", "LICENSE", "pyproject.toml", "examples"]
